@@ -47,10 +47,9 @@ and returns the total number of nodes holding a value greater than n.
 fun numGreaterThan (rootNode: Node, n: int) =
 case rootNode of
 		Empty => 0
-	|	NonEmpty(root,Left,Right) =>
-	if n < root 
-    then 1 + numGreaterThan(Left,n) + numGreaterThan(Right,n) 
-  else numGreaterThan(Left,n) + numGreaterThan(Right,n)
+	|	NonEmpty(root,Left,Right) => 	if n < root 
+    							then 1 + numGreaterThan(Left,n) + numGreaterThan(Right,n) 
+  						else numGreaterThan(Left,n) + numGreaterThan(Right,n)
 	
 val n = treeSum(myTree);
 val greater = numGreaterThan(myTree, 6)
@@ -64,9 +63,9 @@ and returns the total number of leaves in the tree rooted at that node
 
 fun numLeaves (rootNode: Node) =
 case rootNode of
-		Empty => 0
+	Empty => 0
     |	NonEmpty(root,Empty,Empty) => 1
-	|	NonEmpty(root,Left,Right) => numLeaves(Left) + numLeaves(Right)
+    |	NonEmpty(root,Left,Right) => numLeaves(Left) + numLeaves(Right)
 
 val leaves = numLeaves(myTree)
 
@@ -79,7 +78,7 @@ and returns the total number of non-NonEmpty nodes with no right child in the tr
 
 fun numNoRightChild (rootNode: Node) =
 case rootNode of
-		Empty => 0
+	Empty => 0
     |	NonEmpty(root,Empty,Empty) => 0
     |	NonEmpty(root,Left,Empty) => 1
     |   NonEmpty(root, Left, Right) => numNoRightChild(Left) + numNoRightChild(Right)
@@ -108,7 +107,8 @@ and pass anonymous functions to it as arguments.
 *)
 
 fun treeSum2 (rootNode: Node) =
-    let val funct = fn anon => case anon of (x,y,z) => x+y+z
+    let 
+    	val funct = fn anon => case anon of (x,y,z) => x+y+z
     in
         traverseTree(rootNode, 0, funct )
     end
@@ -122,7 +122,8 @@ and pass anonymous functions to it as arguments.
 *)
 
 fun numGreaterThan2 (rootNode: Node, n2:int) =
-    let val funct = fn anon2 => case anon2 of (x,y,z) => x+y+z
+    let 
+    	val funct = fn anon2 => case anon2 of (x,y,z) => x+y+z
     in
         traverseTree(rootNode, 0, funct )
     end
