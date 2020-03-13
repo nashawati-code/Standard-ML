@@ -65,7 +65,7 @@ fun shrinkImage(image: int list)=
     if null image
     then []
     else
-        ((hd image + hd(tl image))div 20) :: shrinkImage(tl (tl image));
+        ((hd image + hd(tl image))div 2) :: shrinkImage(tl (tl image));
 
 (*===========================================================================================================================*)
 (*
