@@ -1,0 +1,25 @@
+<html>
+<body><tt>
+<br>
+<span style="color:#a0a000;">datatype</span>&nbsp;myType&nbsp;<span style="color:#0000ff;">=</span>&nbsp;<span style="color:#ff00ff;">TwoInts</span>&nbsp;<span style="color:#a0a000;">of</span>&nbsp;<span style="color:#00c000;">int</span>&nbsp;<span style="color:#0000ff;">*</span>&nbsp;<span style="color:#00c000;">int</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff;">|</span>&nbsp;<span style="color:#ff00ff;">Str</span>&nbsp;<span style="color:#a0a000;">of</span>&nbsp;<span style="color:#00c000;">string</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff;">|</span>&nbsp;<span style="color:#ff00ff;">Pizza</span><br>
+<br>
+<span style="color:#00aaff;">(* This is a comment *)</span><br>
+<br>
+<span style="color:#a0a000;">val</span>&nbsp;my2ints&nbsp;<span style="color:#0000ff;">=</span>&nbsp;<span style="color:#ff00ff;">TwoInts</span><span style="color:#0000ff;">(</span><span style="color:#ff0000;">3</span>&nbsp;<span style="color:#0000ff;">+</span>&nbsp;<span style="color:#ff0000;">4</span><span style="color:#0000ff;">,</span>&nbsp;<span style="color:#a0a000;">let</span>&nbsp;<span style="color:#a0a000;">val</span>&nbsp;x<span style="color:#0000ff;">::</span>_&nbsp;<span style="color:#0000ff;">=</span>&nbsp;<span style="color:#0000ff;">[</span><span style="color:#ff0000;">5</span><span style="color:#0000ff;">,</span>&nbsp;<span style="color:#ff0000;">6</span><span style="color:#0000ff;">,</span>&nbsp;<span style="color:#ff0000;">7</span><span style="color:#0000ff;">]</span>&nbsp;<span style="color:#a0a000;">in</span>&nbsp;x&nbsp;<span style="color:#a0a000;">end</span><span style="color:#0000ff;">)</span><br>
+<br>
+<span style="color:#a0a000;">val</span>&nbsp;my_str&nbsp;<span style="color:#0000ff;">=</span>&nbsp;<span style="color:#ff00ff;">Str</span><span style="color:#0000ff;">(</span><span style="color:#a0a000;">if</span>&nbsp;<span style="color:#ff0000;">true</span>&nbsp;<span style="color:#a0a000;">orelse</span>&nbsp;<span style="color:#ff0000;">false</span>&nbsp;<span style="color:#a0a000;">andalso</span>&nbsp;<span style="color:#ff0000;">89</span>&nbsp;<span style="color:#0000ff;"><</span>&nbsp;<span style="color:#ff0000;">102</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a0a000;">then</span>&nbsp;<span style="color:#ff0000;">"This string has no quotes"</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a0a000;">else</span>&nbsp;<span style="color:#ff0000;">"This string has \"quotes\""</span><span style="color:#0000ff;">)</span><br>
+<br>
+<span style="color:#a0a000;">val</span>&nbsp;myPizza&nbsp;<span style="color:#0000ff;">=</span>&nbsp;<span style="color:#ff00ff;">Pizza</span><br>
+<br>
+<span style="color:#a0a000;">fun</span>&nbsp;f&nbsp;<span style="color:#0000ff;">(</span>myVal&nbsp;<span style="color:#0000ff;">:</span>&nbsp;myType<span style="color:#0000ff;">)</span>&nbsp;<span style="color:#0000ff;">=</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a0a000;">case</span>&nbsp;myVal&nbsp;<span style="color:#a0a000;">of</span>&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff00ff;">Pizza</span>&nbsp;<span style="color:#0000ff;">=></span>&nbsp;<span style="color:#ff0000;">90</span>&nbsp;<span style="color:#0000ff;">-</span>&nbsp;<span style="color:#ff0000;">53</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff;">|</span>&nbsp;<span style="color:#ff00ff;">TwoInts</span><span style="color:#0000ff;">(</span>i1<span style="color:#0000ff;">,</span>i2<span style="color:#0000ff;">)</span>&nbsp;<span style="color:#0000ff;">=></span>&nbsp;i1&nbsp;<span style="color:#0000ff;">+</span>&nbsp;i2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff;">|</span>&nbsp;<span style="color:#ff00ff;">Str</span>&nbsp;s&nbsp;<span style="color:#0000ff;">=></span>&nbsp;<span style="color:#ff00ff;">String</span><span style="color:#0000ff;">.</span>size&nbsp;s<br>
+<br>
+</body>
+</html></tt>
